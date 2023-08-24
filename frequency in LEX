@@ -1,0 +1,34 @@
+%{
+    int count=0;
+%}
+
+%%
+
+tiru  count++;
+(.|\n)    ;
+
+%%
+
+int yywrap(){}
+
+int main()
+{
+   printf("enter string with the tiru::");
+    yylex();
+    printf("Count of \"tiru\"= %d \n",count);  
+    return 0;
+}
+
+
+output:
+C:\Users\BHASKAR GOWD>set path=C:\Program Files (x86)\GnuWin32\bin
+
+C:\Users\BHASKAR GOWD>flex 40.frequency.l.txt
+
+C:\Users\BHASKAR GOWD>set path=C:\MinGW\bin
+
+C:\Users\BHASKAR GOWD>gcc Lex.yy.c
+
+C:\Users\BHASKAR GOWD>a
+
+enter string with the tiru::tiru tiru ohf sidijs ejdmn tiru Count of "tiru"= 3
